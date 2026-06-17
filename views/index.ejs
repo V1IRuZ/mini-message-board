@@ -1,0 +1,20 @@
+<html>
+
+<head>
+  <title>Homepage</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <ul>
+    <% messages.map(message => { %>
+    <li>
+      <h2><%= message.user %></h2>
+      <p><%= message.text %></p>
+      <span><%= message.added %></span>
+    </li>
+    <% }) %>
+  </ul>
+</body>
+
+</html>
