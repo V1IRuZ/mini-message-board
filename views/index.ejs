@@ -6,15 +6,20 @@
 </head>
 
 <body>
-  <ul>
-    <% messages.map(message => { %>
-    <li>
-      <h2><%= message.user %></h2>
-      <p><%= message.text %></p>
-      <span><%= message.added %></span>
-    </li>
-    <% }) %>
-  </ul>
+  <div class="page">
+    <%- include('header') %>
+    <main class="board">
+      <ul>
+        <% messages.map(message => { %>
+        <li class="message">
+          <h2><%= message.user %></h2>
+          <p><%= message.text %></p>
+          <span><%= message.added %></span>
+        </li>
+        <% }) %>
+      </ul>
+    </main>
+  </div>
 </body>
 
 </html>
