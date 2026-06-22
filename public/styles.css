@@ -78,6 +78,7 @@ ul {
 }
 
 :root {
+  --main-width: clamp(310px, 100%, 800px);
   --system-ui:
     system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -85,6 +86,7 @@ ul {
   --msg-background: #171717;
   --theme-color: #02c39a;
   --white: #f1faee;
+  --blue: #0077b6;
 }
 
 body {
@@ -105,24 +107,31 @@ header {
   padding: 24px;
   border-radius: 20px;
   margin-top: 20px;
-  border: 2px solid var(--theme-color);
 }
 
 header ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 header a {
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-weight: 900;
+  background-color: var(--blue);
   font-size: 2.4rem;
+  text-shadow: 2px 2px 2px var(--msg-background);
 }
 
 main {
+  display: flex;
+  justify-content: center;
   margin-top: 24px;
   padding: 24px;
 }
 
-.board ul {
+.msg-list {
+  width: var(--main-width);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -162,6 +171,7 @@ main {
 }
 
 form {
+  width: clamp(310px, 100%, 800px);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -190,11 +200,11 @@ textarea {
 
 form button {
   padding: 6px 12px;
-  background-color: var(--theme-color);
+  background-color: var(--blue);
   color: var(--white);
   border-style: none;
   font-size: 1.5rem;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -216,6 +226,12 @@ form button {
 .message h2,
 .message span {
   padding: 0 12px;
+}
+
+.message h2 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--theme-color);
 }
 
 .message p {

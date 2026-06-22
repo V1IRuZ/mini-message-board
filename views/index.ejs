@@ -9,7 +9,7 @@
   <div class="page">
     <%- include('header') %>
     <main class="board">
-      <ul>
+      <ul class="msg-list">
         <% messages.map(message => { %>
         <li class="msg-card">
           <a href="/message/<%= message.id %>">
