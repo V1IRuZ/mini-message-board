@@ -26,7 +26,11 @@ indexRouter.get("/new", (req, res) => {
   res.render("form");
 });
 
-indexRouter.get("/:messageId", (req, res) => {
+indexRouter.get("/message", (req, res) => {
+  res.redirect("/");
+});
+
+indexRouter.get("/message/:messageId", (req, res) => {
   const { messageId } = req.params;
 
   const message = messages.find((msg) => msg.id === Number(messageId));
@@ -35,7 +39,11 @@ indexRouter.get("/:messageId", (req, res) => {
     throw new CustomNotFoundError("Message Not Found");
   }
 
-  res.render("message", { title: `Message`, message: message });
+  res.render("message", {
+    title: `Message`,
+    message: message,
+    link: `/${message.id}`,
+  });
 });
 
 indexRouter.post("/new", (req, res) => {
