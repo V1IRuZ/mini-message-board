@@ -140,8 +140,8 @@ main {
   gap: 16px;
 }
 
-.msg h2,
-.msg p {
+.msg-card a h2,
+.msg-card a p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -198,15 +198,29 @@ form button {
   cursor: pointer;
 }
 
+.msg-content {
+  display: flex;
+  justify-content: center;
+}
+
 .message {
+  border-radius: 10px;
+  padding: 24px;
+  border: 2px solid var(--theme-color);
+  width: clamp(310px, 100%, 800px);
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.message h2,
+.message span {
+  padding: 0 12px;
 }
 
 .message p {
   font-size: 1.5rem;
   background-color: var(--msg-background);
   padding: 12px;
-  border-radius: 30px;
+  border-radius: 10px;
 }
