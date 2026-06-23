@@ -60,4 +60,8 @@ indexRouter.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+indexRouter.get("/{*splat}", (req, res) => {
+  res.render("error");
+});
+
 module.exports = indexRouter;
