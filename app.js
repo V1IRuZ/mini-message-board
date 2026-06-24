@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("node:path");
+const PORT = process.env.PORT;
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use((err, req, res, next) => {
   res.status(err.statusCode || 500).render("error");
 });
 
-app.listen(3000, (err) => {
+app.listen(PORT, (err) => {
   if (err) {
     console.log(err);
   }
