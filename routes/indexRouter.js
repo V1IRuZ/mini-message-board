@@ -42,7 +42,6 @@ indexRouter.get("/message/:messageId", (req, res) => {
   res.render("message", {
     title: `Message`,
     message: message,
-    link: `/${message.id}`,
   });
 });
 
