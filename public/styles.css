@@ -114,6 +114,7 @@ header ul {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: 16px;
 }
 
 header a {
@@ -124,6 +125,10 @@ header a {
   background-color: var(--blue);
   font-size: 2.4rem;
   text-shadow: 2px 2px 2px var(--msg-background);
+}
+
+header a:hover {
+  background-color: #006aa2;
 }
 
 main {
@@ -143,6 +148,11 @@ main {
 .board .msg-card {
   border-radius: 10px;
   border: 2px solid var(--theme-color);
+  transition: transform ease-in-out 0.3s;
+}
+
+.msg-card:hover {
+  transform: scale(1.05);
 }
 
 .board .msg-card a {
