@@ -14,8 +14,8 @@
         <% messages.map(message => { %>
         <li class="msg-card">
           <a href="/message/<%= message.id %>">
-            <h2><%= message.user %></h2>
-            <p><%= message.text %></p>
+            <h2><%= message.username %></h2>
+            <p><%= message.message%></p>
             <span class="open">OPEN</span>
           </a>
         </li>
