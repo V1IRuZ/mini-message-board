@@ -8,10 +8,11 @@
 <body>
   <div class="page">
     <%- include('header') %>
-    <main>
+    <main class="errors">
       <div class="error">
         <h2>404 ERROR! PAGE NOT FOUND!</h2>
       </div>
+      <%- include('partials/errorMessage.ejs', {errors: errors}) %>
     </main>
   </div>
 </body>
