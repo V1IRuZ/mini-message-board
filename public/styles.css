@@ -133,6 +133,7 @@ header a:hover {
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 24px;
   padding: 24px;
@@ -254,4 +255,17 @@ form button {
   background-color: var(--msg-background);
   padding: 12px;
   border-radius: 10px;
+}
+
+.errors {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.error-msgs {
+  color: #dd4d4d;
+  padding: 16px;
+  font-size: 1.5rem;
 }
